@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electrical Quotation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="header">
+      <h1>Electrical Quotation</h1>
+      <button onclick="toggleServiceManager()" class="top-button">+ Add Service</button>
+    </div>
+
+    <div class="container">
+
+      <form id="quotationForm">
+        <div class="form-group">
+          <label for="serviceDropdown">Choose Service:</label>
+          <select id="serviceDropdown"></select>
+        </div>
+
+        <div class="form-group">
+          <label>Price (₹):</label>
+          <input type="number" id="servicePrice" min="0" required />
+        </div>
+
+        <div class="form-group">
+          <label>Quantity:</label>
+          <input type="number" id="quantity" min="1" required />
+        </div>
+
+        <button type="submit">Add to Quotation</button>
+      </form>
+
+      <div id="quotationOutput">
+        <h2>Quotation Bill</h2>
+        <table id="quotationTable">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Qty</th>
+              <th>Rate</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <h3 id="grandTotal">Grand Total: ₹0</h3>
+        <button id="downloadPDF">Download PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="serviceManager" class="modal">
+    <div class="modal-content">
+      <h3>Add New Service</h3>
+      <input type="text" id="newServiceName" placeholder="Service name" />
+      <button onclick="addNewService()">Add</button>
+      <button onclick="toggleServiceManager()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

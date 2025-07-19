@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* center the title */
+  align-items: center;
+  position: relative; /* for absolute positioning of button */
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  flex: 1;
+}
+
+.top-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 10px;   /* less horizontal padding */
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 32px;
+  line-height: 1.2;
+  width: auto;        /* auto width to fit content */
+  min-width: 80px;    /* optional min width to keep button from getting too small */
+  white-space: nowrap; /* prevent wrapping */
+}
+
+.top-button:hover {
+  background-color: #218838;
+}
+
+.container {
+  background: white;
+  max-width: 800px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+button[type="submit"], #downloadPDF {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#grandTotal {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
