@@ -11,9 +11,9 @@ body {
 
 .header {
   display: flex;
-  justify-content: center; /* center the title */
+  justify-content: center;
   align-items: center;
-  position: relative; /* for absolute positioning of button */
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -28,16 +28,15 @@ body {
   background-color: #28a745;
   color: white;
   border: none;
-  padding: 6px 10px;   /* less horizontal padding */
+  padding: 6px 10px;
   cursor: pointer;
   font-weight: bold;
   border-radius: 4px;
   font-size: 14px;
   height: 32px;
-  line-height: 1.2;
-  width: auto;        /* auto width to fit content */
-  min-width: 80px;    /* optional min width to keep button from getting too small */
-  white-space: nowrap; /* prevent wrapping */
+  width: auto;
+  min-width: 80px;
+  white-space: nowrap;
 }
 
 .top-button:hover {
@@ -63,7 +62,10 @@ input, select, button {
   margin-top: 5px;
 }
 
-button[type="submit"], #downloadPDF {
+button[type="submit"],
+#downloadPDF,
+#setQuotationTitle,
+#setBillTitle {
   background-color: #007bff;
   color: white;
   border: none;
